@@ -12,6 +12,7 @@ import UniversitySvg from '@/assets/university-svgrepo-com.svg'
 import RealEstateImg from '@/assets/image.png'
 import mySarathi from '@/assets/mysarathi.png'
 import Nextflix from '@/assets/nextflix.png'
+import { Engine, IOptions, RecursivePartial } from 'tsparticles-engine'
 
 export default function EnhancedPortfolio() {
   const [activeSection, setActiveSection] = useState('home')
@@ -105,11 +106,11 @@ export default function EnhancedPortfolio() {
     },
   ]
 
-  const particlesInit = async (main) => {
+  const particlesInit = async (main: Engine) => {
     await loadFull(main)
   }
 
-  const particlesOptions = {
+  const particlesOptions : RecursivePartial<IOptions> = {
     particles: {
       number: { value: 80, density: { enable: true, value_area: 800 } },
       color: { value: '#ffffff' },
