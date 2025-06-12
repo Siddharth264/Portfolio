@@ -11,6 +11,7 @@ import {
   FaLinkedin,
   FaFileDownload,
 } from "react-icons/fa";
+import AnimatedCursor from "./AnimatedCursor";
 import {
   SiNextdotjs,
   SiTailwindcss,
@@ -177,6 +178,7 @@ export default function EnhancedPortfolio() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
+      <AnimatedCursor />
       <Particles
         id="tsparticles"
         init={particlesInit}
